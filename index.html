@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sample Selection Playbook — Corner Renovation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF9F4; --bg-tint:#F4EEE3; --paper:#FFFFFF;
+  --ink:#221E18; --ink-soft:#5C544A; --line:#E7DECF;
+  --oak:#C0935E; --oak-deep:#A9763F; --walnut:#6E4E37; --walnut-deep:#54392684;
+  --accent:#B07A43; --sage:#8A8B72;
+  --maxw:1060px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;font-weight:400}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.12}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,249,244,.82);
+  backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.01em}
+.brand .dot{width:11px;height:11px;border-radius:3px;background:var(--oak-deep);
+  box-shadow:6px 0 0 -2px var(--walnut)}
+.brand small{font-weight:500;color:var(--ink-soft);letter-spacing:0}
+.nav nav{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--ink-soft)}
+.nav nav a:hover{color:var(--accent)}
+.nav nav a{transition:color .2s}
+.badge{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--line);border-radius:30px;padding:5px 11px;background:var(--paper)}
+@media(max-width:780px){.nav nav{display:none}}
+
+/* HERO */
+.hero{padding:92px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(80% 120% at 88% -10%, rgba(192,147,94,.16), transparent 60%),
+  radial-gradient(60% 90% at 0% 110%, rgba(110,78,55,.10), transparent 55%)}
+.hero .wrap{position:relative}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--oak-deep);margin-bottom:22px}
+.hero h1{font-size:clamp(38px,6vw,66px);font-weight:800;max-width:14ch}
+.hero p.lede{font-size:clamp(18px,2.2vw,21px);color:var(--ink-soft);max-width:54ch;margin-top:22px;font-weight:400}
+.rule-card{margin-top:40px;background:var(--ink);color:#F4EEE3;border-radius:16px;
+  padding:26px 30px;max-width:620px;box-shadow:0 24px 60px -28px rgba(84,57,38,.55)}
+.rule-card .lab{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--oak);font-weight:700}
+.rule-card p{font-size:21px;margin-top:8px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+.rule-card b{color:var(--oak)}
+
+/* SECTION */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.sec-h{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+.sec-h .num{font-size:13px;font-weight:700;color:var(--oak-deep);letter-spacing:.1em}
+.sec-h h2{font-size:clamp(26px,3.4vw,36px);font-weight:700}
+.sec-sub{color:var(--ink-soft);max-width:62ch;margin:-18px 0 30px;font-size:16.5px}
+
+/* ROLES */
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.role{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px}
+.role .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  background:var(--bg-tint);font-size:19px;margin-bottom:14px}
+.role h3{font-size:18px;margin-bottom:3px}
+.role .who{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--oak-deep);margin-bottom:10px}
+.role p{font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+@media(max-width:780px){.roles{grid-template-columns:1fr}}
+
+/* STEPS */
+.step{display:grid;grid-template-columns:84px 1fr;gap:8px;padding:26px 0;border-top:1px dashed var(--line)}
+.step:first-child{border-top:none}
+.step .big{font-size:54px;font-weight:800;color:var(--oak);line-height:1;letter-spacing:-.04em;opacity:.92}
+.step h3{font-size:23px;margin-bottom:8px}
+.step ul{list-style:none;margin-top:10px;display:grid;gap:7px}
+.step li{position:relative;padding-left:26px;color:var(--ink-soft);font-size:15.5px}
+.step li:before{content:"";position:absolute;left:3px;top:9px;width:9px;height:9px;border-radius:50%;
+  background:var(--oak);box-shadow:0 0 0 4px rgba(192,147,94,.18)}
+.step li b{color:var(--ink)}
+.note{margin-top:14px;background:var(--bg-tint);border-left:3px solid var(--oak);border-radius:0 12px 12px 0;
+  padding:13px 16px;font-size:14.5px;color:#5b4a37}
+.note b{color:var(--walnut)}
+
+/* DO/DONT */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dd .col{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.dd h3{font-size:15px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.dd .do h3{color:#5d7a4e}.dd .dont h3{color:#a85a44}
+.dd ul{list-style:none;display:grid;gap:9px}
+.dd li{position:relative;padding-left:28px;font-size:14.5px;color:var(--ink-soft)}
+.dd .do li:before{content:"\2713";position:absolute;left:2px;color:#5d7a4e;font-weight:800}
+.dd .dont li:before{content:"\2715";position:absolute;left:2px;color:#a85a44;font-weight:800}
+@media(max-width:780px){.dd{grid-template-columns:1fr}}
+
+/* CATALOG */
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sw{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper)}
+.sw .chip{height:78px}
+.sw .cap{padding:10px 13px}
+.sw .cap b{font-size:14.5px;display:block}
+.sw .cap span{font-size:12px;color:var(--ink-soft)}
+@media(max-width:780px){.swatches{grid-template-columns:repeat(2,1fr)}}
+.cat-note{margin-top:18px}
+
+/* FAQ */
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-bottom:11px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:17px 22px;font-weight:600;font-size:16.5px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .qmark{color:var(--oak-deep);font-weight:700}
+.faq summary:after{content:"+";font-size:22px;color:var(--oak-deep);font-weight:400;transition:transform .2s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq .ans{padding:0 22px 20px;color:var(--ink-soft);font-size:15.5px;line-height:1.6;max-width:70ch}
+.faq details[open] summary{background:var(--bg-tint)}
+
+/* METRICS */
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:8px 4px 4px}
+.mcard h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--oak-deep);padding:14px 20px 6px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td{padding:11px 20px;border-top:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+td.t{text-align:right;font-weight:700;color:var(--ink);white-space:nowrap}
+@media(max-width:780px){.metrics{grid-template-columns:1fr}}
+.done{margin-top:22px;background:var(--ink);color:#F4EEE3;border-radius:16px;padding:22px 26px}
+.done .lab{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oak);font-weight:700;margin-bottom:6px}
+.done b{color:var(--oak)}
+
+footer{padding:46px 0 60px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.tock{color:var(--oak-deep);font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Corner Renovation <small>· Sample Selection</small></div>
+    <nav>
+      <a href="#process">Process</a>
+      <a href="#standards">Standards</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#faq">FAQ</a>
+      <a href="#metrics">Metrics</a>
+    </nav>
+    <span class="badge">Internal</span>
+  </div>
+</header>
+
+<section class="hero" style="border:none">
+  <div class="wrap">
+    <div class="kicker">Playbook · v1 · 2026</div>
+    <h1>Turning color talk into the right samples.</h1>
+    <p class="lede">One repeatable way to go from a client's first mention of "warm walnut" to a confirmed moodboard and a tight set of physical samples — so we stop the re-sends, the swatch-vs-reality surprises, and the "is this 7707 or Essence" mix-ups.</p>
+    <div class="rule-card">
+      <div class="lab">The one rule</div>
+      <p>Moodboard first, samples second. We never order a physical sample until the client has <b>confirmed a color direction</b> on a moodboard built from <b>real kitchen photos</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="roles">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">01</span><h2>Who does what</h2></div>
+    <div class="roles">
+      <div class="role"><div class="ic">✎</div><div class="who">Runs the process</div><h3>Designer</h3>
+        <p>Gets color context on the call, collects references, shows the catalog, builds the moodboard, confirms it with the client, posts it to Slack, creates the Airtable sample task.</p></div>
+      <div class="role"><div class="ic">☻</div><div class="who">The stakeholder</div><h3>Customer</h3>
+        <p>Talks colors on the call, sends references, then confirms the moodboard — or gives feedback so we refine it before anything ships.</p></div>
+      <div class="role"><div class="ic">◳</div><div class="who">Samples ops</div><h3>Valentyna · PM</h3>
+        <p>Curates the exact samples from the <em>confirmed</em> moodboard, photographs them before shipping, ships, posts tracking. Owns the samples database.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">02</span><h2>The process — four steps</h2></div>
+
+    <div class="step">
+      <div class="big">1</div>
+      <div>
+        <h3>Collect the color data</h3>
+        <p style="color:var(--ink-soft);max-width:60ch">Three inputs, and you go after all three on purpose — don't wait for the client to volunteer them.</p>
+        <ul>
+          <li><b>On the call:</b> ask directly — wood color, solid color, and what they <em>dislike</em> ("not ashy", "not stark white", "not too yellow"). Dislikes are the most useful part.</li>
+          <li><b>References:</b> proactively ask for kitchens they love — Pinterest, photos, links.</li>
+          <li><b>Catalog:</b> proactively walk them through our inspiration catalog so they react to real options, not abstractions.</li>
+        </ul>
+        <div class="note"><b>Translate as you go.</b> "Walnut" almost always means our stained-oak-that-reads-as-walnut; "white" splits into warm white / off-white / beige. Capture the intent, not just the word.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="big">2</div>
+      <div>
+        <h3>Build the moodboard</h3>
+        <p style="color:var(--ink-soft);max-width:60ch">One deck. <b>Minimum 2 slides per candidate color</b>, <b>minimum 3 inspiration photos per slide.</b></p>
+        <ul>
+          <li><b>Inspiration photo = a full real kitchen photo.</b> Never a swatch or a sample photo.</li>
+          <li>Use <b>our completed projects first</b>, then catalog / web photos if needed.</li>
+          <li>Label every slide with the <b>catalog color name</b> — not an internal code.</li>
+          <li>Pair wood with the neutral they lean to — "Golden oak + off-white", "Walnut + greige" — that's how people picture a kitchen.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="big">3</div>
+      <div>
+        <h3>Confirm with the customer</h3>
+        <ul>
+          <li><b>Confirm</b> — "yes, that's us." Direction locked.</li>
+          <li><b>Feedback</b> — refine and re-share until it's confirmed (a quick call usually does it).</li>
+        </ul>
+        <div class="note"><b>Set expectations here.</b> Small samples read more muted and colder than a real kitchen. Say it before they open the box, and lean on the moodboard photos + a short video for the true read. Natural oak with 5% lacquer reads warmer / more orange than a raw swatch.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="big">4</div>
+      <div>
+        <h3>Hand off — Slack + Airtable</h3>
+        <p style="color:var(--ink-soft);max-width:60ch">Only once the moodboard is confirmed:</p>
+        <ul>
+          <li>Post the confirmed moodboard in the client's <b>dedicated Slack project channel</b>, tagging the team + Valentyna.</li>
+          <li>Create the <b>Airtable sample task</b> with the selected samples, chosen from the sample catalog and filtered by color.</li>
+          <li>Valentyna curates → <b>photographs before shipping</b> → ships (Chicago stock = fast; Ukraine ≈ up to 14 days) → posts tracking.</li>
+          <li>Bathroom or vanity too? Collect those colors so everything ships together.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="standards">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">03</span><h2>Standards</h2></div>
+    <div class="dd">
+      <div class="col do"><h3>Do</h3><ul>
+        <li>Confirm the moodboard before ordering anything</li>
+        <li>Use real full-kitchen photos as inspiration</li>
+        <li>Keep it to about 5 samples</li>
+        <li>Use catalog names; confirm the code ↔ name in the database</li>
+        <li>Ask tangential vs radial cut for wood samples</li>
+        <li>Photograph samples before they ship</li>
+      </ul></div>
+      <div class="col dont"><h3>Don't</h3><ul>
+        <li>Order samples off a hunch or before confirmation</li>
+        <li>Use a swatch photo as "inspiration"</li>
+        <li>Dump 9+ samples and overwhelm them</li>
+        <li>Ship on a raw code alone (e.g. "7707")</li>
+        <li>Assume "walnut" means walnut wood — it's usually stained oak</li>
+        <li>Promise a match on a painted RAL tone without flagging the price tier</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">04</span><h2>Catalog at a glance</h2></div>
+    <p class="sec-sub">The catalog filters by these colors. Pick the client's direction, filter, select. Names are the source of truth — codes are internal.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#E7D9C0"></div><div class="cap"><b>Washed oak</b><span>palest, cool-neutral</span></div></div>
+      <div class="sw"><div class="chip" style="background:#DCC094"></div><div class="cap"><b>Light oak</b><span>airy, soft grain</span></div></div>
+      <div class="sw"><div class="chip" style="background:#C49A60"></div><div class="cap"><b>Mid-tone oak</b><span>"Essence"</span></div></div>
+      <div class="sw"><div class="chip" style="background:#BD8741"></div><div class="cap"><b>Golden oak</b><span>warm, honeyed</span></div></div>
+      <div class="sw"><div class="chip" style="background:#8C5E3A"></div><div class="cap"><b>Walnut oak</b><span>stained, walnut look</span></div></div>
+      <div class="sw"><div class="chip" style="background:#5E3F28"></div><div class="cap"><b>American walnut</b><span>natural species</span></div></div>
+      <div class="sw"><div class="chip" style="background:#42301F"></div><div class="cap"><b>Dark oak</b><span>"6162"</span></div></div>
+      <div class="sw"><div class="chip" style="background:#241C16"></div><div class="cap"><b>Black oak</b><span>deepest</span></div></div>
+      <div class="sw"><div class="chip" style="background:#F2ECE0;border-bottom:1px solid #e7decf"></div><div class="cap"><b>Warm white</b><span>Niemann Ice White</span></div></div>
+      <div class="sw"><div class="chip" style="background:#EBE0CC"></div><div class="cap"><b>Off-white</b><span>RAL 9010 · painted tier</span></div></div>
+      <div class="sw"><div class="chip" style="background:#E2D4BC"></div><div class="cap"><b>Cream</b><span>Sahara / RAL 9001</span></div></div>
+      <div class="sw"><div class="chip" style="background:#D3C6B0"></div><div class="cap"><b>Beige / greige</b><span>Rebel Beige family</span></div></div>
+    </div>
+    <div class="note cat-note"><b>Naming &gt; codes.</b> The same color shows up as a code in one place and a name in another — old photos labeled "7707" are actually Essence. If name and code disagree, check with Valentyna before anything ships.</div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">05</span><h2>FAQ — what if → what we do</h2></div>
+    <div class="faq">
+      <details open><summary><span><span class="qmark">What if</span> the client only talks vaguely about color on the call?</span></summary><div class="ans">Pin it down with dislikes and our catalog. Show 3–4 real kitchens and ask "more like this, or this?" Capture wood pref + solid pref + one or two hard nos. That's enough to start a moodboard.</div></details>
+      <details><summary><span><span class="qmark">What if</span> we don't have a real kitchen photo for a color?</span></summary><div class="ans">Use a completed project in the same family first (mid-tone and golden live together, etc.). If we genuinely have none, use a high-quality web photo of a real kitchen — never a swatch. Note in the slide it's a reference, not our build.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the client says they want "walnut"?</span></summary><div class="ans">Show both: real American walnut and stained-oak-that-reads-as-walnut. We usually deliver the walnut look as stained oak — cheaper, cleaner grain. Confirm whether they care about the color or the actual species.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the sample looks muted / cold / "whitewashed" to them?</span></summary><div class="ans">Expected — small swatches always read flatter than a real kitchen under real light. Point them back to the moodboard photos + a short video. Offer the natural + 5% lacquer version, which reads warmer. If needed, Valentyna reshoots under good lighting.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the client wants "white"?</span></summary><div class="ans">Split it: warm white vs off-white vs beige-y neutral. Off-white = RAL 9010, which is painted and a higher price tier — flag that early. Show the two or three closest catalog options side by side.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the code and the name don't match in the database?</span></summary><div class="ans">The name wins. Don't ship on a code alone. Ping Valentyna to confirm the entry before the task goes out.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the client wants more than 5 samples?</span></summary><div class="ans">Default is about 5 so we don't overwhelm them. Trim to the strongest options that match the moodboard. The exception is testing a new supplier line (e.g. Adler) — a couple extra is fine there.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the moodboard isn't confirmed but the client is pushing for samples?</span></summary><div class="ans">Still confirm direction first — even a five-minute "yes, that's the vibe." Ordering before that is exactly what creates re-sends. You can ship the same week once it's confirmed.</div></details>
+      <details><summary><span><span class="qmark">What if</span> nobody specified tangential vs radial cut?</span></summary><div class="ans">Ask before ordering — it changes the grain look a lot. Default for the warm / organic look is tangential ("flat" or "cross-section" cut).</div></details>
+      <details><summary><span><span class="qmark">What if</span> the client has a bathroom or vanity too?</span></summary><div class="ans">Collect those colors in the same round and ship all samples together in one box. Saves a shipment and a wait.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the client is in a hurry?</span></summary><div class="ans">Ship whatever we hold in Chicago stock immediately; the rest follows from Ukraine (~up to 14 days). Set that expectation up front and post tracking in the channel.</div></details>
+      <details><summary><span><span class="qmark">What if</span> they ask what samples cost?</span></summary><div class="ans">Samples are refundable minus about $30 each if they decide not to proceed. Frame it as risk-free — they get the real materials in their own home, under their own light.</div></details>
+      <details><summary><span><span class="qmark">What if</span> the client changes their mind after confirming?</span></summary><div class="ans">Update the moodboard, re-confirm the new direction, then adjust the Airtable task before Valentyna ships. The moodboard always stays the single source of truth.</div></details>
+      <details><summary><span><span class="qmark">What if</span> there's no Slack channel for the project yet?</span></summary><div class="ans">Create it, add the team + Valentyna, then post the confirmed moodboard there. Every project handoff lives in its own channel.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="metrics">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">06</span><h2>How we'll know it's working</h2></div>
+    <p class="sec-sub">A mix of "are we following the steps" and "did it make things better." Spot-check 3 random projects a week.</p>
+    <div class="metrics">
+      <div class="mcard"><h3>Leading — process is followed</h3>
+        <table>
+          <tr><td>Projects with a confirmed moodboard <em>before</em> any sample ordered</td><td class="t">100%</td></tr>
+          <tr><td>Moodboards meeting the standard (≥2 slides/color, ≥3 real photos/slide, named)</td><td class="t">100%</td></tr>
+          <tr><td>Samples photographed before shipping</td><td class="t">100%</td></tr>
+          <tr><td>Moodboard posted in the channel + Airtable task created</td><td class="t">1 / project</td></tr>
+        </table>
+      </div>
+      <div class="mcard"><h3>Lagging — it's working</h3>
+        <table>
+          <tr><td>Sample re-sends per project</td><td class="t">↓ &lt; 0.3</td></tr>
+          <tr><td>First-call → samples shipped time</td><td class="t">↓ &amp; predictable</td></tr>
+          <tr><td>"That's us" on the first moodboard (no re-do)</td><td class="t">↑ &gt; 70%</td></tr>
+          <tr><td>$500 → 10% conversion</td><td class="t">↑</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="done">
+      <div class="lab">Rollout is "done" when</div>
+      Every active designer has run at least one project end-to-end through this flow, and we've had <b>two straight weeks with zero sample orders that lacked a confirmed moodboard.</b>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Corner Renovation · <span class="tock">Sample Selection Playbook</span> · v1 — internal use</div>
+    <div>Built from team process threads, client calls & the 2026 color analysis.</div>
+  </div>
+</footer>
+
+</body>
+</html>
